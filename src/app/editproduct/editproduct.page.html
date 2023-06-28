@@ -1,0 +1,53 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-title>editproduct</ion-title>
+  </ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="home"></ion-back-button>
+  </ion-buttons>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <form [formGroup]="editProduct" (ngSubmit)="OnSubmit()">
+    <ion-item>
+      <img [src]="imagedata"/>
+    </ion-item>
+    <ion-item>
+      <ion-label> Title </ion-label>
+      <ion-input formControlName="title" type="text" placeholder="write title"></ion-input>
+    </ion-item>
+    <ion-item>
+    <ion-label> description</ion-label>
+    <ion-input formControlName="description" type="text" placeholder="type description"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label> price</ion-label>
+    <ion-input formControlName="price" type="text" placeholder="type price"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label> discountPercentage</ion-label>
+    <ion-input formControlName="discountPercentage" type="text" placeholder="type discountPercentage"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label> rating</ion-label>
+    <ion-input formControlName="rating" type="text" placeholder="type rating"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label> stock</ion-label>
+    <ion-input formControlName="stock" type="text" placeholder="type stock"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label> brand</ion-label>
+    <ion-input formControlName="brand" type="text" placeholder="type brand"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label> category</ion-label>
+    <ion-input formControlName="category" type="text" placeholder="type category"></ion-input>
+  </ion-item>
+
+  <ion-row>
+    <ion-col>
+      <ion-button expand="block" type="submit"><b>Edit a Product</b></ion-button>
+    </ion-col>
+  </ion-row>
+  </form>
+</ion-content>

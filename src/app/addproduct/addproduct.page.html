@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>addproduct</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<form [formGroup]="addProduct" (ngSubmit)="OnSubmit(addProduct.value)">
+  <ion-item>
+    <ion-label> Title </ion-label>
+    <ion-input formControlName="title" type="text" placeholder="write title"></ion-input>
+  </ion-item>
+  <ion-item>
+  <ion-label> Content</ion-label>
+  <ion-input formControlName="content" type="text" placeholder="type content"></ion-input>
+</ion-item>
+<ion-row>
+  <ion-col>
+    <ion-button expand="block" type="submit"><b>Add a Product</b></ion-button>
+  </ion-col>
+</ion-row>
+</form>
+</ion-content>

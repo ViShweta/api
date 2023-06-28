@@ -1,0 +1,48 @@
+<ion-header color='primary'>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <h1 class="ion-text-center">
+      <b>Product Details</b>
+    </h1>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+<ion-grid>
+  <ion-row>
+    <ion-col size ="12">
+      <ion-card (click)="routeclick(singleproduct)">
+        <img src={{singleproduct.thumbnail}}/>
+      </ion-card>
+        <ion-list>
+          <ion-item class="content">
+            <ion-label>{{singleproduct.title}}</ion-label>
+            <ion-label>{{singleproduct.brand}}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-text>{{singleproduct.price}}</ion-text>
+            <ion-text>{{singleproduct.discountPercentage}}</ion-text>
+          </ion-item>
+          <ion-item>
+            <ion-label><ion-icon name='star-half'></ion-icon>{{singleproduct.rating}}</ion-label>
+            <ion-label>{{singleproduct.category}}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label> {{singleproduct.stock}}</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>{{singleproduct.description}}</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>
+<!-- <ion-footer>
+  <ion-row>
+    <ion-col>
+      <ion-button href="editproduct/:pid" expand="block"> Add New Product</ion-button>
+    </ion-col>
+  </ion-row>  
+</ion-footer> -->

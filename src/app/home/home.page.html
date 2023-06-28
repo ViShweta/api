@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      All Product 
+    </ion-title>
+  </ion-toolbar>
+  <ion-searchbar (ionInput)="onChange($event)"></ion-searchbar>
+</ion-header>
+<ion-content >
+  <ion-grid>
+    <ion-row size ="6">
+      <ion-col size="6" *ngFor="let product of productList" >
+        <ion-card (click)="routeclick(product)">
+          <img src={{product.thumbnail}}/>
+            <ion-list >
+              <ion-item >
+                <ion-text>{{product.title}}</ion-text>
+                <ion-text>{{product.brand}}</ion-text>
+              </ion-item>
+              <ion-item>
+                <ion-text>{{product.price}}</ion-text>
+                <ion-text>{{product.discountPercentage}}</ion-text>
+              </ion-item>
+              <ion-item>
+                <ion-text><ion-icon name='star-half'></ion-icon>{{product.rating}}</ion-text>
+                <ion-text>{{product.category}} </ion-text>
+              </ion-item>
+            </ion-list>
+        </ion-card>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+<ion-footer>
+  <ion-row>
+    <ion-col>
+      <ion-button href="/addproduct" expand="block"> Add New Product</ion-button>
+    </ion-col>
+  </ion-row>  
+</ion-footer>
